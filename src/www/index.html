@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Idol Produce Framework</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="set-div schedule-screen ">
+            <div class="set-div idol-menu">
+                <div class="">レッスン</div>
+                <div class="">オーディション</div>
+                <div class="">イベント</div>
+                <div class="">コミュ</div>
+                <div class="">休暇</div>
+                <div class="">同行</div>
+                <div class="">衣装・アクセ変更</div>
+            </div>
+            <div id="schedule-message">今後のスケジュールを選択しよう。</div>
+            <div class="set-div check-schedule">
+                <div class="now-week selection"></div>
+                <div class="first-week">仕事</div>
+                <div class="second-week">オーディション</div>
+                <div class="third-week"></div>
+            </div>
+            <div class="set-div schedule-controler">
+                <div class="controler-up">↑</div>
+                <div class="controler-down">↓</div>
+                <div class="controler-switch">切り替え</div>
+                <div class="controler-start">活動開始</div>
+            </div>
+        </div>
+        <div class="commu-screen blind">
+            <div class="commu-name">危険なP</div>
+            <div class="commu-text">くぎゅううううううううううううううううううううううううううううううううううううう<br>さて今後の展開ですが、特に考えていないのでりっちゃんの誕生日までにそこそこの完成度にしたいよねーってやつ。<br>四行くらいがちょうどいいですかね？もう少し文字が大きい方がいい？</div>
+        </div>
+        <div class="choises-screen blind">
+            <div class="choises-timer">5</div>
+            <div class="two-choises set-div blind">
+                <div class="two-choises-a">A</div>
+                <div class="two-choises-b">B</div>
+            </div>
+            <div class="three-choises set-div blind">
+                <div class="three-choises-a">A</div>
+                <div class="three-choises-wrap set-div">
+                    <div class="three-choises-b">B</div>
+                    <div class="three-choises-c">C</div>
+                </div>
+            </div>
+            <div class="four-choises set-div blind">
+                <div class="four-choises-wrap set-div">
+                    <div class="four-choises-a">A</div>
+                    <div class="four-choises-b">B</div>
+                </div>
+                <div class="four-choises-wrap set-div">
+                    <div class="four-choises-c">C</div>
+                    <div class="four-choises-d">D</div>
+                </div>
+            </div>
+        </div>
+        <div class="status-ui blind">
+            <div class="week">7</div>
+            <div class="health-bar">
+                <div id="health-bar"></div>
+            </div>
+            <div class="capital">
+
+            </div>
+            <div class="memories">
+
+            </div>
+            <div class="idol-condition">
+
+            </div>
+            <div class="motivation">
+
+            </div>
+            <div class="status-graph">
+                <canvas id="status-graph"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/Chart.min.js"></script>
+        <script type="text/javascript" src="js/operateUi.js"></script>
+        <script type="text/javascript" src="js/testCode.js"></script>
+    </body>
+</html>

@@ -1,0 +1,311 @@
+$black: rgba(66,66,66,1);
+$deep_black: rgba(33,33,33 ,1);
+$white:rgba(250,250,250 ,1);
+$red:rgba(244,67,54 ,1);
+$deep_red:rgba(146,22,22 ,1);
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.set-div{
+    display: flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+}
+
+.blind{
+    display: none;
+}
+
+//ここまで汎用or変数定義
+
+.schedule-screen{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idol-menu{
+    box-sizing: border-box;
+    height: 10vh;
+    width: 90vw;
+    border-bottom: solid medium $black;
+    border-left: solid medium $black;
+    border-right: solid medium $black;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+.idol-menu > div{
+    height: 100%;
+    width: calc(90vw / 7);
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.5vw;
+    box-sizing: border-box;
+    border-right: solid medium $black;
+}
+
+.idol-menu > div:last-child{
+    border-right: none;
+}
+
+#schedule-message{
+    font-size: 2vw;
+    width: 100%;
+    text-align: center;
+    margin-top: 12vh;
+}
+
+.check-schedule{
+    margin-top: 10vh;
+    font-size: 1.8vw;
+    flex-direction: column;
+}
+
+.check-schedule > div{
+    margin-top: 3vh;
+    padding-bottom: 0.5vh;
+    box-sizing: border-box;
+}
+
+.idol-menu ~ .check-schedule::before{
+    content: "アイドルの予定";
+    border-bottom: dotted medium $black;
+    text-align: center;
+    padding-bottom: 2vh;
+}
+
+.producer-menu ~ .check-schedule::before{
+    content: "プロデューサーの予定";
+    border-bottom: dotted medium $black;
+}
+
+.check-schedule > div:nth-child(1){
+    animation: select-week 1s ease 0.5s infinite alternate;
+}
+
+@keyframes select-week {
+    0%{
+        border-bottom-color: $white;
+    }
+    100%{
+        border-bottom-color: $black;
+    }
+}
+
+.now-week::before{
+    content: "今週 : ";
+}
+
+.first-week::before{
+    content: "来週 : ";
+}
+
+.second-week::before{
+    content: "再来週 : ";
+}
+
+.third-week::before{
+    content: "三週間後 : ";
+}
+
+.schedule-controler{
+    margin-top: 5vh;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+.schedule-controler > div{
+    height: 10vh;
+    width: 12vw;
+    border: solid medium $black;
+    border-radius: 1vw;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 10vh;
+}
+//ここまでschedule-screenのUI
+
+.commu-name{
+    height: 6vh;
+    width: 15vw;
+    margin-left: 25vw;
+    margin-top: 60vh;
+    padding-left: 0.5vw;
+    box-sizing: border-box;
+    border: solid medium $black;
+    border-radius: 0.5vw;
+    font-size: 2vw;
+    line-height: 6vh;
+    text-align: center;
+}
+
+.commu-text{
+    box-sizing: border-box;
+    height: 20vh;
+    width: 50vw;
+    margin-top: 1.5vh;
+    margin-left: 25vw;
+    padding: 1vw 1vw;
+    font-size: 1.5vw;
+    border: solid medium $black;
+    border-radius: 0.5vw;
+    line-height: 1.3em;
+}
+//ここまでテキスト表示に関する部分
+.choises-timer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 8vw;
+    width: 8vw;
+    font-size: 4vw;
+    line-height: 8vw;
+    text-align: center;
+    margin: auto;
+    border: dotted thick $red;
+    border-radius: 50%;
+}
+
+.two-choises{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.two-choises > div{
+    border: solid medium $black;
+    width: 20vw;
+    height: 10vh;
+    font-size: 2.5vw;
+    line-height: 10vh;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+.two-choises-a{
+    margin-left: 5vw;
+}
+
+.two-choises-b{
+    margin-right: 5vw;
+}
+
+.two-choises{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.three-choises div:not(.three-choises-wrap){
+    border: solid medium $black;
+    width: 20vw;
+    height: 10vh;
+    font-size: 2.5vw;
+    line-height: 10vh;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+.three-choises-a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 25vh;
+
+}
+
+.three-choises-wrap{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.three-choises-b{
+    margin-left: 5vw;
+}
+
+.three-choises-c{
+    margin-right: 5vw;
+}
+
+.four-choises div:not(.four-choises-wrap){
+    border: solid medium $black;
+    width: 20vw;
+    height: 10vh;
+    font-size: 2.5vw;
+    line-height: 10vh;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+.four-choises{
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+}
+
+.four-choises-wrap{
+    height: 50vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.four-choises-a{
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+.four-choises-b{
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+
+.four-choises-c{
+    margin-left: 10vw;
+    margin-bottom: 10vh;
+}
+
+.four-choises-d{
+    margin-right: 10vw;
+    margin-bottom: 10vh;
+}
+//ここまでchoises-screen
+
+.week::after{
+    content: "週";
+}
+
+.health-bar::before{
+    content:"♡";
+    color: $deep_red;
+}
+
+.capital::after{
+    content: "ペリカ";
+}
+
+.status-graph{
+    height: 12vw;
+    width: 12vw;
+    z-index: 2;
+}
